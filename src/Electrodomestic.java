@@ -18,4 +18,21 @@ public class Electrodomestic {
         this.consumEnergetic = consumEnergeticOpcions[5];
         this.pes = 5;
     }  
+    
+    
+    public double obtindrePreuVenda(){
+        double preuVenda = 0;
+        switch (consumEnergetic) {
+            case 'A' -> {preuVenda = preuBase +  100;}
+            case 'B' -> {preuVenda = preuBase +  80;}
+            case 'C' -> {preuVenda = preuBase +  60;}
+            case 'D' -> {preuVenda = preuBase +  50;}
+            case 'E' -> {preuVenda = preuBase +  30;}
+            case 'F' -> {preuVenda = preuBase +  10;}
+        }
+        return preuVenda;
+        
+    }
+    
+    
 }
