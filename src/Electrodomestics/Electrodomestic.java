@@ -1,12 +1,14 @@
+package Electrodomestics;
+
 public class Electrodomestic {
     private final char[] consumEnergeticOpcions = {'A','B','C','D','E','F'};
     
     private int numSerie;
-    private double preuBase;
+    protected double preuBase;
     private String marca;
     private String model;
     private TipusColor tipusColor;
-    private char consumEnergetic;
+    protected char consumEnergetic;
     private double pes;
 
     public Electrodomestic(int numSerie, String marca, String model) {
@@ -31,7 +33,6 @@ public class Electrodomestic {
             case 'F' -> {preuVenda = preuBase +  10;}
         }
         return preuVenda;
-        
     }
     
     
