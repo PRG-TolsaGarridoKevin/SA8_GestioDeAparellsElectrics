@@ -13,4 +13,15 @@ public class Televisio extends Electrodomestic{
         this.pulgadas = 20;
     }
     
+    @Override
+    public double obtindrePreuVenda(){
+        double preuVenda = super.obtindrePreuVenda();
+        
+        if (pulgadas > 40) {
+            preuVenda = super.preuBase*0.30;
+        }
+
+        return preuVenda;
+    }
+    
 }
