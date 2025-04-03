@@ -1,4 +1,4 @@
-public abstract class AparellElectric {
+public abstract class AparellElectric implements Endollable{
     protected boolean estaEnchufado;
     protected String numeroSerie;
     protected boolean teCorrentElectric;

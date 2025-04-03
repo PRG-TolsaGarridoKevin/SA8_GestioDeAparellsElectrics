@@ -44,4 +44,13 @@ public class Mobil extends DispositiuInformatic{
         return "\n[Mòbil] Núm.Sèrie: "+ numeroDeSerie +" "+ teCorrent +", "+estaEnces+", "+teInternet+", Memoria: "+memoriaInterna+", Marca: "+marca+", Model: "+model;
     }
     
+    @Override
+    public void donarEnergia() {
+        teCorrentElectric = true;
+    }
+
+    @Override
+    public void llevarEnergia() {
+        teCorrentElectric = false;
+    }
 }

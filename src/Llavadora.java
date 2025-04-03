@@ -46,6 +46,14 @@ public class Llavadora extends Electrodomestic{
         
         return "\n[Llavadora] Núm.Sèrie: "+ numeroSerie +" "+ teCorrent +", "+estaEnces+", Marca: "+marca+", Model: '"+model+"', Tipus Consum: "+consumEnergetic+", Color: "+tipusColor+", Preu Base: "+preuBase+", Preu Final: "+obtindrePreuVenda()+", Càrrega: "+carrega;
     }
-    
-    
+
+    @Override
+    public void donarEnergia() {
+        teCorrentElectric = true;
+    }
+
+    @Override
+    public void llevarEnergia() {
+        teCorrentElectric = false;
+    }
 }

@@ -1,5 +1,5 @@
 
-public class DispositiuInformatic extends AparellElectric{
+public abstract class DispositiuInformatic extends AparellElectric{
     protected String numeroDeSerie;
     protected boolean estaEnces;
     protected boolean estaConectatAInternet;
