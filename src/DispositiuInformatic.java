@@ -1,10 +1,10 @@
 
 public class DispositiuInformatic extends AparellElectric{
-    protected int numeroDeSerie;
+    protected String numeroDeSerie;
     protected boolean estaEnces;
     protected boolean estaConectatAInternet;
 
-    public DispositiuInformatic(int numeroDeSerie) {
+    public DispositiuInformatic(String numeroDeSerie) {
         this.numeroDeSerie = numeroDeSerie;
         this.estaEnces = false;
         this.estaConectatAInternet = false;

@@ -21,6 +21,8 @@ public class Llavadora extends Electrodomestic{
         
         if (carrega > 10) {
             preuVenda += 50;
+        }else{
+            preuVenda = preuBase;
         }
 
         return preuVenda;
