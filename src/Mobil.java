@@ -1,7 +1,6 @@
 
 public class Mobil extends DispositiuInformatic{
-   
-    
+
     private TipusMemoria memoriaInterna;
     private String marca;
     private String model;

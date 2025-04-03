@@ -3,9 +3,9 @@
 public abstract class Electrodomestic extends AparellElectric{
     
     protected double preuBase;
-    private String marca;
-    private String model;
-    private TipusColor tipusColor;
+    protected String marca;
+    protected String model;
+    protected TipusColor tipusColor;
     protected TipusConsumElectric consumEnergetic;
     private int pes;
     private int unidadesStock;
@@ -33,7 +33,6 @@ public abstract class Electrodomestic extends AparellElectric{
         }
         return preuVenda;
     }
-    
-    
-    
+
+ 
 }
