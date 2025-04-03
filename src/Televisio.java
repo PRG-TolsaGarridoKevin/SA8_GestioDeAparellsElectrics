@@ -65,14 +65,4 @@ public class Televisio extends Electrodomestic{
         
         return "\n[Televisió] Núm.Sèrie: "+ numeroSerie +" "+ teCorrent +", "+estaEnces+", Marca: "+marca+", Model: '"+model+"', Tipus Consum: "+consumEnergetic+", Color: "+tipusColor+", Preu Base: "+preuBase+", Preu Final: "+obtindrePreuVenda()+", "+wifiHabilitat+", "+connectadoAInternet+", Resolució: "+pulgadasResolucion;
     }
-    
-    @Override
-    public void donarEnergia() {
-        teCorrentElectric = true;
-    }
-
-    @Override
-    public void llevarEnergia() {
-        teCorrentElectric = false;
-    }
 }

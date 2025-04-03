@@ -41,14 +41,4 @@ public class Portatil extends DispositiuInformatic{
         
         return "\n[Portatil] Núm.Sèrie: "+ numeroDeSerie +" "+ teCorrent +", "+estaEnces+", "+teInternet+", RAM: "+memoriaRam+", VelocitatGPU: "+velocitatGpu+", Grandaria HD: "+tamanyDiscDur;
     }
-    
-    @Override
-    public void donarEnergia() {
-        teCorrentElectric = true;
-    }
-
-    @Override
-    public void llevarEnergia() {
-        teCorrentElectric = false;
-    }
 }

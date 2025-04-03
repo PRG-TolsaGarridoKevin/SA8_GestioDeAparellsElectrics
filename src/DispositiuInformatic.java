@@ -10,7 +10,15 @@ public abstract class DispositiuInformatic extends AparellElectric{
         this.estaConectatAInternet = false;
     }
 
-   
+   @Override
+    public void donarEnergia() {
+        teCorrentElectric = true;
+    }
+
+    @Override
+    public void llevarEnergia() {
+        teCorrentElectric = false;
+    }
 
     
 }
