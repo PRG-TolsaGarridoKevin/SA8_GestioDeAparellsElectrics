@@ -1,14 +1,13 @@
-package Electrodomestics;
-public class Llavadora extends Electrodomestic{
-    private boolean estaEncesa;
-    private double carrega;
 
-    public Llavadora(int numSerie, String marca, String model) {
+public class Llavadora extends Electrodomestic{
+    private int carrega;
+
+    public Llavadora(String numSerie, String marca, String model) {
         super(numSerie, marca, model);
-        this.estaEncesa = false;
         this.carrega = 7;
     }
-    
+
+ 
     @Override
     public double obtindrePreuVenda(){
         double preuVenda = super.obtindrePreuVenda();

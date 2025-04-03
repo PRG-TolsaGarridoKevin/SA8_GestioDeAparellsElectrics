@@ -1,30 +1,29 @@
-package Electrodomestics;
 
-public class Electrodomestic {
-    private final char[] consumEnergeticOpcions = {'A','B','C','D','E','F'};
+        
+public abstract class Electrodomestic extends AparellElectric{
     
-    private int numSerie;
     protected double preuBase;
     private String marca;
     private String model;
     private TipusColor tipusColor;
-    protected char consumEnergetic;
-    private double pes;
+    protected TipusConsumElectric consumEnergetic;
+    private int pes;
+    private int unidadesStock;
 
-    public Electrodomestic(int numSerie, String marca, String model) {
-        this.numSerie = numSerie;
+    public Electrodomestic(String numeroSerie, String marca, String model) {
+        super.numeroSerie = numeroSerie;
         this.preuBase = 100;
         this.marca = marca;
         this.model = model;
         this.tipusColor = TipusColor.BLANC;
-        this.consumEnergetic = consumEnergeticOpcions[5];
+        this.consumEnergetic = TipusConsumElectric.F;
         this.pes = 5;
-    }  
+    }
     
-    
+            
     public double obtindrePreuVenda(){
         double preuVenda = 0;
-        switch (consumEnergetic) {
+        switch (TipusConsumElectric.obtenerCaracter(this.consumEnergetic)) {
             case 'A' -> {preuVenda = preuBase +  100;}
             case 'B' -> {preuVenda = preuBase +  80;}
             case 'C' -> {preuVenda = preuBase +  60;}
@@ -34,6 +33,7 @@ public class Electrodomestic {
         }
         return preuVenda;
     }
+    
     
     
 }

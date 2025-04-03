@@ -1,10 +1,10 @@
-package DispositiusInformatics;
+
 public class Portatil extends DispositiuInformatic{
     private int memoriaRam;
-    private int velocitatGpu;
+    private double velocitatGpu;
     private int tamanyDiscDur;
     
-    public Portatil(int numeroDeSerie, int memoriaRam, int velocitatGpu, int tamanyDiscDur) {
+    public Portatil(int numeroDeSerie, int memoriaRam, double velocitatGpu, int tamanyDiscDur) {
         super(numeroDeSerie);
         super.estaEnces = false;
         super.teCorrentElectric = false;
