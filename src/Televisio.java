@@ -1,5 +1,4 @@
-
-public class Televisio extends Electrodomestic{
+public class Televisio extends Electrodomestic implements Activable, Connectable{
     private boolean estaWifiHabilitat;
     private boolean estaConectadaAInternet;
     private int pulgadasResolucion;
@@ -46,7 +45,11 @@ public class Televisio extends Electrodomestic{
         }
         
         if (estaEnchufado) {
-            estaEnces = "Si està encés";
+            if (teCorrentElectric) {
+                estaEnces = "Si està encés";
+            }else{
+                estaEnces = "No està encés";
+            }            
         }else{
             estaEnces = "No està encés";
         }
@@ -64,5 +67,30 @@ public class Televisio extends Electrodomestic{
         }
         
         return "\n[Televisió] Núm.Sèrie: "+ numeroSerie +" "+ teCorrent +", "+estaEnces+", Marca: "+marca+", Model: '"+model+"', Tipus Consum: "+consumEnergetic+", Color: "+tipusColor+", Preu Base: "+preuBase+", Preu Final: "+obtindrePreuVenda()+", "+wifiHabilitat+", "+connectadoAInternet+", Resolució: "+pulgadasResolucion;
+    }
+
+    @Override
+    public void activar() {
+        System.out.println("Aparell encès"); 
+    }
+
+    @Override
+    public void desactivar() {
+        System.out.println("Aparell apagat");  
+    }
+
+    @Override
+    public boolean esPermetConnexio() {
+        return teCorrentElectric && estaEnchufado && estaWifiHabilitat;
+    }
+
+    @Override
+    public void establirConexio() {
+        estaConectadaAInternet = true;
+    }
+
+    @Override
+    public void llevarConexio() {
+        estaConectadaAInternet = false;
     }
 }

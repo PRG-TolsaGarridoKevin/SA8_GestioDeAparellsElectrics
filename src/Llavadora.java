@@ -1,5 +1,5 @@
 
-public class Llavadora extends Electrodomestic{
+public class Llavadora extends Electrodomestic implements Activable{
     private int carrega;
 
     public Llavadora(String numSerie, String marca, String model) {
@@ -39,11 +39,25 @@ public class Llavadora extends Electrodomestic{
         }
         
         if (estaEnchufado) {
-            estaEnces = "Si està encés";
+            if (teCorrentElectric) {
+                estaEnces = "Si està encés";
+            }else{
+                estaEnces = "No està encés";
+            }            
         }else{
             estaEnces = "No està encés";
         }
         
         return "\n[Llavadora] Núm.Sèrie: "+ numeroSerie +" "+ teCorrent +", "+estaEnces+", Marca: "+marca+", Model: '"+model+"', Tipus Consum: "+consumEnergetic+", Color: "+tipusColor+", Preu Base: "+preuBase+", Preu Final: "+obtindrePreuVenda()+", Càrrega: "+carrega;
+    }
+    
+    @Override
+    public void activar() {
+        System.out.println("Aparell encès"); 
+    }
+
+    @Override
+    public void desactivar() {
+        System.out.println("Aparell apagat");  
     }
 }
