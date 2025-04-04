@@ -1,4 +1,4 @@
 public interface Endollable {
-    void donarEnergia(); 
-    void llevarEnergia(); 
+    public void donarEnergia(); 
+    public void llevarEnergia(); 
 }

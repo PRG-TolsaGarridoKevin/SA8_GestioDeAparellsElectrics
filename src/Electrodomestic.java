@@ -33,15 +33,4 @@ public abstract class Electrodomestic extends AparellElectric{
         }
         return preuVenda;
     }
-
-    @Override
-    public void donarEnergia() {
-        teCorrentElectric = true;
-    }
-
-    @Override
-    public void llevarEnergia() {
-        teCorrentElectric = false;
-    }
- 
 }
