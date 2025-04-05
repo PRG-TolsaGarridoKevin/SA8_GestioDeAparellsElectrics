@@ -24,11 +24,24 @@ public class TestEncaminador {
         
         System.out.println("\n----------- Crear encaminador i aparellar els tres aparells. Televisió no podrà per no tindre habilitat Wifi -----------\n");
         
-        
-        
         encaminador.aparellar(tele1);
         encaminador.aparellar(portatil1);
         encaminador.aparellar(telefon1);
+        
+        System.out.println("\n----------- Habilitar Wifi per a televisió i aparellar amb encaminador -----------\n");
+        
+        tele1.habilitarWifi();
+        encaminador.aparellar(tele1);
+        
+        System.out.println("\n----------- Desaparellar mòbil i mostrar els aparells aparellats -----------\n");
+        
+        encaminador.desaparellar(telefon1);
+        encaminador.mostrarDispositiusConnectats();
+        
+        System.out.println("\n----------- Desendollar televisió i llistar aparells aparellats -----------\n");
+        
+        encaminador.desaparellar(tele1);
+        encaminador.mostrarDispositiusConnectats();
         
     }
 }

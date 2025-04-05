@@ -26,19 +26,31 @@ public class Encaminador{
         if (aparellsConnectats.contains(aparell)) {
             aparell.llevarConexio();
             aparellsConnectats.remove(aparell);
+            System.out.println("Aparell desendollat");
             return true;
         }
         return false;
     }
     
     public int obtindreNumeroDeDispositiusAparellats(AparellElectric aparell){
-        return -1;
+        return aparellsConnectats.size();
     }
     
     public void actulitzarDispositiusAparellats(AparellElectric aparell){
         for(Connectable objeto: aparellsConnectats){
             if (!objeto.esPermetConnexio()) {
                 aparellsConnectats.remove(aparell);
+            }
+        }
+    }
+    
+    public void mostrarDispositiusConnectats() {
+        if (aparellsConnectats.isEmpty()) {
+            System.out.println("No hi ha aparells connectats.");
+        } else {
+            for (Connectable aparell : aparellsConnectats) {
+                System.out.println(aparell); 
+                System.out.println("");
             }
         }
     }
