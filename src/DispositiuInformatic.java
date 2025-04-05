@@ -12,12 +12,12 @@ public abstract class DispositiuInformatic extends AparellElectric implements Ac
     
     @Override
     public void activar() {
-        System.out.println("Aparell encès"); 
+        System.out.println("["+this.getClass().getSimpleName()+"] Aparell encès"); 
     }
 
     @Override
     public void desactivar() {
-        System.out.println("Aparell apagat");  
+        System.out.println("["+this.getClass().getSimpleName()+"] Aparell apagat");  
     }
     
     @Override

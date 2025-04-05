@@ -40,9 +40,9 @@ public class Llavadora extends Electrodomestic implements Activable{
         
         if (estaEnchufado) {
             if (teCorrentElectric) {
-                estaEnces = "Si està encés";
+                estaEnces = "[Si està encés";
             }else{
-                estaEnces = "No està encés";
+                estaEnces = "[No està encés";
             }            
         }else{
             estaEnces = "No està encés";
@@ -51,13 +51,4 @@ public class Llavadora extends Electrodomestic implements Activable{
         return "\n[Llavadora] Núm.Sèrie: "+ numeroSerie +" "+ teCorrent +", "+estaEnces+", Marca: "+marca+", Model: '"+model+"', Tipus Consum: "+consumEnergetic+", Color: "+tipusColor+", Preu Base: "+preuBase+", Preu Final: "+obtindrePreuVenda()+", Càrrega: "+carrega;
     }
     
-    @Override
-    public void activar() {
-        System.out.println("Aparell encès"); 
-    }
-
-    @Override
-    public void desactivar() {
-        System.out.println("Aparell apagat");  
-    }
 }

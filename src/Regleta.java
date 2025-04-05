@@ -14,7 +14,7 @@ public class Regleta {
         if (aparellsEndollats.size() < MAX_ENDOLLS) {
             aparellsEndollats.add(aparellEndollable);
             aparellEndollable.donarEnergia();
-            System.out.println("["+aparellEndollable.getClass().getSimpleName()+"] Aparrel endollat");
+            System.out.println("["+aparellEndollable.getClass().getSimpleName()+"]"+" Aparrel endollat");
             return true;
         }else{
             System.out.println("No hi ha espai en la regleta");
@@ -30,7 +30,7 @@ public class Regleta {
             System.out.println("["+aparellEndollable.getClass().getSimpleName()+"] Aparrel desendollat");
             return true;
         } 
-        System.out.println("["+aparellEndollable.getClass().getSimpleName()+"]" +" L'aparell no està endollat a la regleta");
+        System.out.println("["+aparellEndollable.getClass().getSimpleName() +"] L'aparell no està endollat a la regleta");
         return false;
     };
     
@@ -47,7 +47,4 @@ public class Regleta {
             System.out.println(objeto);
         }
     }
-    
-    
-    
 }

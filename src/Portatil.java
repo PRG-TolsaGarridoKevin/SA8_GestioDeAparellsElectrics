@@ -1,5 +1,5 @@
 
-public class Portatil extends DispositiuInformatic{
+public class Portatil extends DispositiuInformatic implements Connectable{
     private int memoriaRam;
     private double velocitatGpu;
     private int tamanyDiscDur;
@@ -40,5 +40,10 @@ public class Portatil extends DispositiuInformatic{
         }
         
         return "\n[Portatil] Núm.Sèrie: "+ numeroDeSerie +" "+ teCorrent +", "+estaEnces+", "+teInternet+", RAM: "+memoriaRam+", VelocitatGPU: "+velocitatGpu+", Grandaria HD: "+tamanyDiscDur;
+    }
+    
+    @Override
+    public String getPrefix() {
+        return "[Portàtil]";
     }
 }

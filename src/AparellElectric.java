@@ -1,7 +1,7 @@
 
 import java.util.Objects;
 
-public abstract class AparellElectric implements Endollable{
+public abstract class AparellElectric implements Endollable, Activable, Connectable{
     protected boolean estaEnchufado;
     protected String numeroSerie;
     protected boolean teCorrentElectric;
@@ -43,6 +43,21 @@ public abstract class AparellElectric implements Endollable{
         }
         final AparellElectric other = (AparellElectric) obj;
         return Objects.equals(this.numeroSerie, other.numeroSerie);
+    }
+    
+    @Override
+    public void activar() {
+        if (teCorrentElectric) {
+            System.out.println("["+this.getClass().getSimpleName()+"] Aparell encès"); 
+        }else{
+            System.out.println("["+this.getClass().getSimpleName()+"] No es pot encendre (no hi ha corrent)");
+        }
+        
+    }
+
+    @Override
+    public void desactivar() {
+        System.out.println("["+this.getClass().getSimpleName()+"] Aparell apagat");  
     }
     
     

@@ -69,15 +69,6 @@ public class Televisio extends Electrodomestic implements Activable, Connectable
         return "\n[Televisió] Núm.Sèrie: "+ numeroSerie +" "+ teCorrent +", "+estaEnces+", Marca: "+marca+", Model: '"+model+"', Tipus Consum: "+consumEnergetic+", Color: "+tipusColor+", Preu Base: "+preuBase+", Preu Final: "+obtindrePreuVenda()+", "+wifiHabilitat+", "+connectadoAInternet+", Resolució: "+pulgadasResolucion;
     }
 
-    @Override
-    public void activar() {
-        System.out.println("Aparell encès"); 
-    }
-
-    @Override
-    public void desactivar() {
-        System.out.println("Aparell apagat");  
-    }
 
     @Override
     public boolean esPermetConnexio() {
@@ -92,5 +83,10 @@ public class Televisio extends Electrodomestic implements Activable, Connectable
     @Override
     public void llevarConexio() {
         estaConectadaAInternet = false;
+    }
+    
+    @Override
+    public String getPrefix() {
+        return "[Televisió]";
     }
 }

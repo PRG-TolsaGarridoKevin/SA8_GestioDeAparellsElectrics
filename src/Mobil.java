@@ -1,5 +1,5 @@
 
-public class Mobil extends DispositiuInformatic{
+public class Mobil extends DispositiuInformatic implements Connectable{
 
     private TipusMemoria memoriaInterna;
     private String marca;
@@ -42,5 +42,10 @@ public class Mobil extends DispositiuInformatic{
         }
         
         return "\n[Mòbil] Núm.Sèrie: "+ numeroDeSerie +" "+ teCorrent +", "+estaEnces+", "+teInternet+", Memoria: "+memoriaInterna+", Marca: "+marca+", Model: "+model;
+    }
+
+    @Override
+    public String getPrefix() {
+        return "[Mòbil]";
     }
 }
