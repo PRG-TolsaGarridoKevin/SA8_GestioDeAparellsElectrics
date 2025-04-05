@@ -30,6 +30,10 @@ public class Televisio extends Electrodomestic implements Activable, Connectable
         return preuVenda;
     }
     
+    public void habilitarWifi() {
+        this.estaWifiHabilitat = true; 
+    }
+    
      @Override
     public String toString() {
         String teCorrent;
